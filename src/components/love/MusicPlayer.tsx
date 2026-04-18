@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import { Reveal } from "./Reveal";
-import ourSong from "@/assets/mp3/Theera_Ulaa_-_A_R_Rahman_Darshana_Nikhita_Gandhi.mp3";
 import musicPenguGif from "@/assets/images/pengu-pudgy (1).gif";
+
+const ourSong = "/audio/our-song.mp3";
 
 const SONG_NAME = "Theera Ulaa - A.R. Rahman";
 
