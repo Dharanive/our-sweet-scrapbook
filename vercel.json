@@ -1,10 +1,10 @@
 {
   "version": 2,
   "framework": "vite",
-  "build": {
-    "env": {
-      "NITRO_PRESET": "vercel"
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
-  },
-  "outputDirectory": ".output/public"
+  ]
 }
