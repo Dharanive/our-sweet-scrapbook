@@ -56,35 +56,6 @@ export function FloatingDecor() {
           ☁️
         </div>
       ))}
-      {sparkles.map((s) => (
-        <span
-          key={`s-${s.id}`}
-          className="absolute animate-twinkle"
-          style={{
-            top: `${s.top}%`,
-            left: `${s.left}%`,
-            fontSize: `${s.size}px`,
-            animationDelay: `${s.delay}s`,
-          }}
-        >
-          {s.emoji}
-        </span>
-      ))}
-      {hearts.map((h) => (
-        <span
-          key={`h-${h.id}`}
-          className="absolute animate-float-up"
-          style={{
-            left: `${h.left}%`,
-            bottom: `-40px`,
-            fontSize: `${h.size}px`,
-            animationDelay: `${h.delay}s`,
-            animationDuration: `${h.duration}s`,
-          }}
-        >
-          {h.emoji}
-        </span>
-      ))}
     </div>
   );
 }

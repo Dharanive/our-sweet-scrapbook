@@ -2,9 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { Reveal } from "./Reveal";
 
 const ITEMS = [
-  { label: "days together", value: 365, icon: "🗓️" },
+  { label: "days together", value: 545, icon: "🗓️" },
   { label: "memories made", value: 1024, icon: "💞" },
-  { label: "photos of us", value: 248, icon: "📸" },
+  { label: "photos of us", value: 2448, icon: "📸" },
   { label: "smiles you gave me", value: 9999, icon: "😊" },
 ];
 

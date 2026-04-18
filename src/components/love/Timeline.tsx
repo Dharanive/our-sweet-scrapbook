@@ -1,12 +1,18 @@
 import { Reveal } from "./Reveal";
+import jd1 from "@/assets/images/JD1.jpeg";
+import jd21 from "@/assets/images/JD21.jpeg";
+import jd16 from "@/assets/images/JD16.jpeg";
+import jd8 from "@/assets/images/JD8.jpeg";
+import jd9 from "@/assets/images/JD9.jpeg";
+import jd3 from "@/assets/images/JD3.jpeg";
 
 const STEPS = [
-  { title: "First Meet", date: "the day my world shifted", emoji: "🌷", text: "I still remember the exact look in your eyes." },
-  { title: "First Chat", date: "tiny butterflies", emoji: "💌", text: "We talked till the sun came up — I knew." },
-  { title: "First Photo", date: "frozen in time", emoji: "📸", text: "The cutest little polaroid of us, forever." },
-  { title: "Special Day", date: "ours forever", emoji: "🎀", text: "A day stitched into my heart in soft pink thread." },
-  { title: "Best Memory", date: "still my favorite", emoji: "🧸", text: "If I could relive one moment — it would be this." },
-  { title: "Today", date: "still falling", emoji: "💖", text: "And tomorrow. And every day after that, my love." },
+  { title: "First Meet", date: "the day my world shifted", emoji: "🌷", text: "I still remember the exact look in your eyes.", image: jd1 },
+  { title: "First Chat", date: "tiny butterflies", emoji: "💌", text: "We talked till the sun came up — I knew.", image: jd21 },
+  { title: "First Photo", date: "frozen in time", emoji: "📸", text: "The cutest little polaroid of us, forever.", image: jd16 },
+  { title: "Special Day", date: "ours forever", emoji: "🎀", text: "A day stitched into my heart in soft pink thread.", image: jd8 },
+  { title: "Best Memory", date: "still my favorite", emoji: "🧸", text: "If I could relive one moment — it would be this.", image: jd9 },
+  { title: "Today", date: "still falling", emoji: "💖", text: "And tomorrow. And every day after that, my love.", image: jd3 },
 ];
 
 export function Timeline() {
@@ -34,7 +40,7 @@ export function Timeline() {
               <Reveal key={s.title} delay={i * 80}>
                 <div className={`relative flex flex-col items-center md:flex-row ${left ? "" : "md:flex-row-reverse"}`}>
                   <div className={`w-full md:w-1/2 ${left ? "md:pr-12 md:text-right" : "md:pl-12"}`}>
-                    <div className="glass inline-block max-w-md rounded-3xl p-6 text-left">
+                    <div className="glass inline-block max-w-sm rounded-3xl p-6 text-left">
                       <div className="flex items-center gap-3">
                         <span className="text-4xl">{s.emoji}</span>
                         <div>
@@ -42,8 +48,8 @@ export function Timeline() {
                           <p className="text-sm text-foreground/50">{s.date}</p>
                         </div>
                       </div>
-                      <div className="mt-4 aspect-[4/3] w-full rounded-2xl bg-gradient-to-br from-[var(--blush)]/40 to-[var(--sky)]/40 flex items-center justify-center text-6xl">
-                        {s.emoji}
+                      <div className="mt-4 aspect-[4/3] w-full overflow-hidden rounded-2xl bg-gradient-to-br from-[var(--blush)]/40 to-[var(--sky)]/40">
+                        <img src={s.image} alt={s.title} className="h-full w-full object-cover" />
                       </div>
                       <p className="mt-4 text-foreground/70">{s.text}</p>
                     </div>

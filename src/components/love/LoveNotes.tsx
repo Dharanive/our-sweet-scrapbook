@@ -1,4 +1,5 @@
 import { Reveal } from "./Reveal";
+import valentinesDayGif from "@/assets/images/happy-valentines-day-valentines-day.gif";
 
 const NOTES = [
   { text: "you are my favorite memory, and my favorite future too.", color: "oklch(0.95 0.06 90)", rotate: -3 },
@@ -13,8 +14,9 @@ export function LoveNotes() {
   return (
     <section className="relative z-10 px-6 py-24">
       <Reveal>
-        <div className="mx-auto mb-16 max-w-3xl text-center">
-          <p className="font-display text-2xl text-[var(--rose-deep)]">tiny letters 💌</p>
+        <div className="mx-auto mb-16 max-w-3xl text-center flex flex-col items-center gap-0">
+          <img src={valentinesDayGif} alt="Happy Valentines Day" className="h-32 w-auto" />
+          <p className="font-display text-2xl text-[var(--rose-deep)]">tiny letters</p>
           <h2 className="mt-2 font-display text-6xl text-[var(--blue-deep)] md:text-7xl">love notes for you</h2>
         </div>
       </Reveal>

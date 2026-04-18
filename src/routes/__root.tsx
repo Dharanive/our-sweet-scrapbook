@@ -29,7 +29,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Our Little World — A love letter for you 💕" },
+      { title: "JD💕" },
       { name: "description", content: "A dreamy scrapbook of us — memories, polaroids, love notes, and everything in between." },
       { name: "author", content: "with love" },
       { property: "og:title", content: "Our Little World 💕" },

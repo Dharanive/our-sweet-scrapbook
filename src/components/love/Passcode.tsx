@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Reveal } from "./Reveal";
 
-const CORRECT = "1234"; // change to your special date / code
+const CORRECT = "2711"; // change to your special date / code
 
 export function Passcode({ onUnlock }: { onUnlock: () => void }) {
   const [code, setCode] = useState("");
@@ -32,10 +32,8 @@ export function Passcode({ onUnlock }: { onUnlock: () => void }) {
     <section id="passcode" className="relative z-10 flex min-h-screen items-center justify-center px-6 py-24">
       <Reveal>
         <div
-          className={`glass relative w-full max-w-md rounded-[2.5rem] p-8 text-center ${shake ? "animate-wiggle" : ""}`}
+          className="glass relative w-full max-w-md rounded-[2.5rem] p-8 text-center"
         >
-          <span className="absolute -left-6 -top-6 animate-wiggle text-5xl">🔐</span>
-          <span className="absolute -right-4 -top-4 animate-bounce-soft text-4xl">🎀</span>
 
           <h2 className="font-display text-5xl text-[var(--rose-deep)]">Only my love can unlock this</h2>
           <p className="mt-2 text-foreground/60">enter our little secret code 💕</p>
@@ -58,32 +56,32 @@ export function Passcode({ onUnlock }: { onUnlock: () => void }) {
               <button
                 key={n}
                 onClick={() => press(n)}
-                className="aspect-square rounded-2xl bg-gradient-to-br from-white to-[var(--sky)]/40 font-display text-3xl text-[var(--blue-deep)] shadow-[var(--shadow-soft)] transition-all hover:scale-105 hover:from-[var(--blush)]/40 hover:to-[var(--sky)]/40 active:scale-95"
+                className="aspect-square rounded-2xl bg-gradient-to-br from-white to-[var(--sky)]/40 font-display text-3xl text-[var(--blue-deep)] shadow-[var(--shadow-soft)]"
               >
                 {n}
               </button>
             ))}
             <button
               onClick={clear}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-[var(--blush)]/40 to-white text-2xl shadow-[var(--shadow-soft)] transition hover:scale-105"
+              className="aspect-square rounded-2xl bg-gradient-to-br from-[var(--blush)]/40 to-white text-2xl shadow-[var(--shadow-soft)]"
             >
               ✕
             </button>
             <button
               onClick={() => press("0")}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-white to-[var(--sky)]/40 font-display text-3xl text-[var(--blue-deep)] shadow-[var(--shadow-soft)] transition-all hover:scale-105 active:scale-95"
+              className="aspect-square rounded-2xl bg-gradient-to-br from-white to-[var(--sky)]/40 font-display text-3xl text-[var(--blue-deep)] shadow-[var(--shadow-soft)]"
             >
               0
             </button>
             <button
               onClick={back}
-              className="aspect-square rounded-2xl bg-gradient-to-br from-[var(--sky)]/40 to-white text-2xl shadow-[var(--shadow-soft)] transition hover:scale-105"
+              className="aspect-square rounded-2xl bg-gradient-to-br from-[var(--sky)]/40 to-white text-2xl shadow-[var(--shadow-soft)]"
             >
               ⌫
             </button>
           </div>
 
-          <p className="mt-6 text-xs text-foreground/40">psst... try 1 2 3 4 💌</p>
+          {/* Hint removed */}
         </div>
       </Reveal>
     </section>
